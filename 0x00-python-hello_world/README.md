@@ -6,7 +6,7 @@
 |2.Hello, print | Write a Python script that prints a string|
 |3.Print integer | Print an integer using a variable|
 |4.Print float | Print a number with two decial places|
-|   |   |
+|5.Print String| Print a string 3 times then print a portion of the string|
 |   |   |
 |   |   |
 |   |   |
