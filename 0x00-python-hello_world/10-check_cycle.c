@@ -17,7 +17,7 @@ int check_cycle(listint_t *list)
 
 	while (temp != NULL)
 	{
-		if (temp->next > temp)
+		if (temp->next >= temp)
 			return (1);
 		temp = temp->next;
 	}
