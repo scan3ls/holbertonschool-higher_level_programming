@@ -5,7 +5,7 @@
 |1.Run inline | Write a Shell script that runs Python code|
 |2.Hello, print | Write a Python script that prints a string|
 |3.Print integer | Print an integer using a variable|
-|   |   |
+|4.Print float | Print a number with two decial places|
 |   |   |
 |   |   |
 |   |   |
