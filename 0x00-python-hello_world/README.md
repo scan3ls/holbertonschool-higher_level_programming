@@ -9,7 +9,7 @@
 |5.Print String| Print a string 3 times then print a portion of the string|
 |6.Concatenate strings| Concatenate 2 strings|
 |7.Copy-Cut-Paste| Use various slices of a  string|
-|   |   |
+|8.Create a new sentance| Use slicing to create a new sentence|
 |   |   |
 |   |   |
 |   |   |
