@@ -10,6 +10,6 @@
 |6.Concatenate strings| Concatenate 2 strings|
 |7.Copy-Cut-Paste| Use various slices of a  string|
 |8.Create a new sentance| Use slicing to create a new sentence|
-|   |   |
+|9.Easter Egg| Write a python script that print "The Zen of Python", by Tim Peters  |
 |   |   |
 |   |   |
