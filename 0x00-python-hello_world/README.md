@@ -8,7 +8,7 @@
 |4.Print float | Print a number with two decial places|
 |5.Print String| Print a string 3 times then print a portion of the string|
 |6.Concatenate strings| Concatenate 2 strings|
-|   |   |
+|7.Copy-Cut-Paste| Use various slices of a  string|
 |   |   |
 |   |   |
 |   |   |
