@@ -10,3 +10,4 @@
 |5-print_comb2.py| Print tens and ones place for numbers 0 to 99|
 |6-print_comb3.py| Prints all possible combinations of two digits, no double eg.00, 11, 22, etc.|
 |7-islower.py| Checks for lowercase character|
+|8-uppercase.py| Prints a string in uppercase followed by a new line|
