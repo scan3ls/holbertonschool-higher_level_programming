@@ -15,3 +15,4 @@
 |10-add.py| Return the value of two numbers|
 |11-pow.py| Return the value of a power operation|
 |12-fizzbuzz.py| Fizz Buzz in python|
+|13-insert_number.c, linked_lists.c, lists.h| inserts a number into a sorted singly linked list|
