@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 def fizzbuzz():
     # fizzbuzz - print 1-99 replacing multiples of three with Fizz
     #                       replacing multiples of fize with Buzz
