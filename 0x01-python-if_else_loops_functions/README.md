@@ -14,3 +14,4 @@
 |9-print_last_digit.py| Prints and returns last digit of a number|
 |10-add.py| Return the value of two numbers|
 |11-pow.py| Return the value of a power operation|
+|12-fizzbuzz.py| Fizz Buzz in python|
