@@ -10,5 +10,8 @@
 |6-concat.py | Concatenate 2 strings|
 |7-edges.py | Use various slices of a  string|
 |8-concat_edges | Use slicing to create a new sentence|
-|9=easter_egg.py | Write a python script that print "The Zen of Python", by Tim Peters|
+|9-easter_egg.py | Write a python script that print "The Zen of Python", by Tim Peters|
 |10-check_cycle.c, 10-linked_list.c, 10-main.c, lists.h, Zen| Write a function in C that checks if a singly linked list has a cycle|
+|||
+|||
+|102-magic_calculation.py| Write a Python function from bytecode|
