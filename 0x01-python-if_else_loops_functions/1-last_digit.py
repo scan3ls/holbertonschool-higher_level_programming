@@ -12,12 +12,15 @@ if number < 0:
     rem = number % 10
     number *= -1
     rem *= -1
-    print("{} {} is {} {}".format(str0, number, rem, str3))
+    if rem == 0:
+        print("{} {} is {} {}".format(str0, number, rem, str2))
+    else:
+        print("{} {} is {} {}".format(str0, number, rem, str3))
 else:
     rem = number % 10
-    if rem < 6:
-        print("{} {} is {} {}".format(str0, number, rem, str3))
-    elif rem == 0:
+    if rem == 0:
         print("{} {} is {} {}".format(str0, number, rem, str2))
+    elif rem < 6:
+        print("{} {} is {} {}".format(str0, number, rem, str3))
     else:
         print("{} {} is {} {}".format(str0, number, rem, str1))
