@@ -7,8 +7,14 @@ str2 = "and is less than 6 and not 0"
 if num2 < 0:
     num2 *= -1
 if num2 % 10 == 0:
-    print("Last digit of {} is {} and is 0".format(number, (num2 % 10)))
+    print("Last digit of {} is {} and is 0".format(number,
+                                                   (num2 % 10) if number > 0
+                                                   else -(num2 % 10)))
 elif num2 % 10 > 5:
-    print("Last digit of {} is {} {}".format(number, (num2 % 10), str1))
+    print("Last digit of {} is {} {}".format(number,
+                                             (num2 % 10) if number > 0
+                                             else -(num2 % 10), str1))
 else:
-    print("Last digit of {} is {} {}".format(number, (num2 % 10), str2))
+    print("Last digit of {} is {} {}".format(number,
+                                             (num2 % 10) if number > 0
+                                             else -(num2 % 10), str2))
