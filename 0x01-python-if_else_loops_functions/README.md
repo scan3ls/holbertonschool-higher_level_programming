@@ -12,3 +12,5 @@
 |7-islower.py| Checks for lowercase character|
 |8-uppercase.py| Prints a string in uppercase followed by a new line|
 |9-print_last_digit.py| Prints and returns last digit of a number|
+|10-add.py| Return the value of two numbers|
+|11-pow.py| Return the value of a power operation|
