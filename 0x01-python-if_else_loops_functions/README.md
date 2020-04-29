@@ -11,3 +11,4 @@
 |6-print_comb3.py| Prints all possible combinations of two digits, no double eg.00, 11, 22, etc.|
 |7-islower.py| Checks for lowercase character|
 |8-uppercase.py| Prints a string in uppercase followed by a new line|
+|9-print_last_digit.py| Prints and returns last digit of a number|
