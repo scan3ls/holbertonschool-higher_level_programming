@@ -20,3 +20,6 @@ This section's focus:
 - ```break``` and ```continues``` statements
 - ```range```
 - ```return```
+
+### 0x02.Python - import & modules
+This section is focused on importing and using functions, and creating modules.
