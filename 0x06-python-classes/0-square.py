@@ -3,6 +3,8 @@
 
 Does nothing; Is empty.
 """
+
+
 class Square:
     """Empty square class"""
     pass
