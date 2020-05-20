@@ -67,6 +67,7 @@ class Square:
 
         if size == 0:
             print()
+            return
         for line in range(ypos):
             print()
 
