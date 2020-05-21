@@ -1,0 +1,65 @@
+# 0-add_integer.txt
+
+===========================
+How to Use 0-add_integer.py
+===========================
+
+Only contains one function called ``add_integer()``.
+
+Numbers
+=======
+
+``add_integer()`` return the addition of its arguments.
+Return value is equal to using the ``+`` operator with
+the two arguments.
+
+::
+    >>> add_integer = __import__('0-add_integer').add_integer
+    >>> add_integer(3, 6)
+    9
+
+Works with negative numebrs.
+::
+    >>> add_integer = __import__('0-add_integer').add_integer
+    >>> add_integer(-3, -6)
+    -9
+
+The second argument is assumed 98
+::
+    >>> add_integer = __import__('0-add_integer').add_integer
+    >>> add_integer(2)
+    100
+
+Works with floats.
+::
+    >>> add_integer = __import__('0-add_integer').add_integer
+    >>> add_integer(3.0, 7.0)
+    10
+
+Non-Numbers
+===========
+
+If either of the arguments are not a integer or float a TypeError is raised.
+
+::
+    >>> add_integer = __import__('0-add_integer').add_integer
+    >>> add_integer('a', 6)
+    Traceback (most recent call last):
+        ...
+    TypeError: a must be an integer
+
+::
+    >>> add_integer = __import__('0-add_integer').add_integer
+    >>> add_integer(3, [5, 6])
+    Traceback (most recent call last):
+        ...
+    TypeError: b must be an integer
+
+If no arguments or None is given exception is raised as if the first argument
+is an error.
+::
+    >>> add_integer = __import__('0-add_integer').add_integer
+    >>> add_integer(None)
+    Traceback (most recent call last):
+        ...
+    TypeError: a must be an integer
