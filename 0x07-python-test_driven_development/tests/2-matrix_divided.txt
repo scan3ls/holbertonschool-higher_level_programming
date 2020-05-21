@@ -1,0 +1,94 @@
+# 2-matrix_divided.txt
+
+===========================
+How to use 2-matrix_divided
+===========================
+
+Contains single function ``matrix_divided``.
+``matrix_divided`` divides all elements of a 
+matrix, prints the results, and returns the
+new matrix.
+
+Matrix
+======
+The matrix must be a list of lists of integers or floats.
+The div argument must be a number(int, float).
+
+::
+    >>> matrix_divided = __import__('2-matrix_divided').matrix_divided
+    >>> matrix = [[1, 2, 3], [4, 5, 6]]
+    >>> matrix_divided(matrix, 3)
+    [[0.33, 0.67, 1.0], [1.33, 1.67, 2.0]]
+
+Matrix containing a list of a non-number types raises a 
+type error.
+::
+    >>> matrix_divided = __import__('2-matrix_divided').matrix_divided
+    >>> matrix = [[1, 2, 3], ['a', 'b', 'c']]
+    >>> matrix_divided(matrix, 3)
+    Traceback (most recent call last):
+        ...
+    TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+First dimension of matrix containing non-list elements
+raises a type error.
+::
+    >>> matrix_divided = __import__('2-matrix_divided').matrix_divided
+    >>> matrix = [[1, 2, 3], 3]
+    >>> matrix_divided(matrix, 3)
+    Traceback (most recent call last):
+        ...
+    TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+Calling the function without passing arguments also
+raises a type error.
+::
+    >>> matrix_divided = __import__('2-matrix_divided').matrix_divided
+    >>> matrix_divided()
+    Traceback (most recent call last):
+        ...
+    TypeError: matrix_divided() missing 2 required positional arguments: 'matrix' and 'div'
+
+Each list element of the matrix must have the same length
+or a type error is raised.
+::
+    >>> matrix_divided = __import__('2-matrix_divided').matrix_divided
+    >>> matrix = [[1, 2], [3]]
+    >>> matrix_divided(matrix, 3)
+    Traceback (most recent call last):
+      ...
+    TypeError: Each row of the matrix must have the same size
+
+Div
+===
+The division argument must be a non-zero number(int, float).
+
+If div is zero a ZeroDivisionError is raised.
+::
+    >>> matrix_divided = __import__('2-matrix_divided').matrix_divided
+    >>> matrix = [[1, 2, 3], [4, 5, 6]]
+    >>> matrix_divided(matrix, 0)
+    Traceback (most recent call last):
+        ...
+    ZeroDivisionError: division by zero
+
+If div is not a number a type error is raised.
+::
+    >>> matrix_divided = __import__('2-matrix_divided').matrix_divided
+    >>> matrix = [[1, 2, 3], [4, 5, 6]]
+    >>> matrix_divided(matrix, 'a')
+    Traceback (most recent call last):
+        ...
+    TypeError: div must be a number
+
+If only the matrix is passed and not the div
+a type error should be raised.
+::
+    >>> matrix_divided = __import__('2-matrix_divided').matrix_divided
+    >>> matrix = [[1, 2, 3], [4, 5, 6]]
+    >>> matrix_divided(matrix)
+    Traceback (most recent call last):
+        ...
+    TypeError: matrix_divided() missing 1 required positional argument: 'div'
+
+
