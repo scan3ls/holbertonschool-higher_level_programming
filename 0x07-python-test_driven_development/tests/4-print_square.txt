@@ -1,0 +1,52 @@
+# 4-print_square.txt
+
+=============================
+How to use 4-print_square
+=============================
+
+4-print_square contains a single function
+``print_square`` that will print a square
+containing '#'s to the standard output.
+The number of '#' printed must be the 
+same on each side of the square. The size
+of the square must be an integer. The 
+size must be equal or greater than zero.
+
+Integer
+========
+
+Any positive integer should print a square
+without error.
+::
+    >>> print_square = __import__('4-print_square').print_square
+    >>> print_square(1)
+    #
+
+::
+    >>> print_square = __import__('4-print_square').print_square
+    >>> print_square(4)
+    ####
+    ####
+    ####
+    ####
+
+::
+    >>> print_square = __import__('4-print_square').print_square
+    >>> print_square(0)
+    
+If size in negative a value error is raised.
+::
+    >>> print_square = __import__('4-print_square').print_square
+    >>> print_square(-5)
+    Traceback (most recent call last):
+        ...
+    ValueError: size must be >= 0
+
+If size is not an integer a type error is raised.
+::
+    >>> print_square = __import__('4-print_square').print_square
+    >>> print_square(3.33)
+    Traceback (most recent call last):
+        ...
+    TypeError: size must be an integer
+

@@ -9,11 +9,12 @@ def say_my_name(first_name, last_name=""):
     Args:
         first_name: first name
         last_name: last name
-    
     """
 
+    msg = "say_my_name() missing 1 required positional argument: 'first_name'"
+
     if first_name is None:
-        raise TypeError("say_my_name() missing 1 required positional argument: 'first_name'")
+        raise TypeError(msg)
     if type(first_name) is not str:
         raise TypeError("first_name must be a string")
     if type(last_name) is not str:

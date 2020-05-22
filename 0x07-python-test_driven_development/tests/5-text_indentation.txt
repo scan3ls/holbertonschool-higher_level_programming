@@ -1,0 +1,48 @@
+# 5-text_indentation.txt
+
+=============================
+How to use 5-text_indentation
+=============================
+
+5-text_indentation contains a single function ``text_indentation``
+that will print a string with a new line inserted after each
+occurance of special characters.
+
+Special characters
+==================
+'.' '?' ':'
+
+Expected use with a string or multi-line string.
+
+Single line string
+-----------
+::
+    >>> text_indentation = __import__('5-text_indentation').text_indentation
+    >>> text_indentation("Sentance one. Sentance two: Sentance three?")
+    Sentanceone.
+    <BLANKLINE>
+    Sentance two:
+    <BLANKLINE>
+    Sentance three?
+    <BLANKLINE>
+
+Multi-line string
+::
+    >>> text_indentation = __import__('5-text_indentation').text_indentation
+    >>> text_indentation("""Sentance one. \
+    ... Sentance two: \
+    ... Sentance three?""")
+    Sentanceone.
+    <BLANKLINE>
+    Sentance two:
+    <BLANKLINE>
+    Sentance three?
+    <BLANKLINE>
+
+If text if not a string a type error is raised
+::
+    >>> text_indentation = __import__('5-text_indentation').text_indentation
+    >>> text_indentation(3)
+    Traceback (most recent call last):
+        ...
+    TypeError: text must be a string
