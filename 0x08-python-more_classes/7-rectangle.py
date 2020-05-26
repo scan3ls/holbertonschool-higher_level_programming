@@ -7,15 +7,21 @@ class Rectangle:
     """Creates a Rectangle
 
     Attributes:
-        width: width of the rectangle
-        height: height of the rectangle
+        number_of_instances: rectangle counter
+        print_symbol: rectangle vertex printing symbol
     """
+    number_of_instances = 0
+    print_symbol = "#"
 
     def __init__(self, width=0, height=0):
         """Constructor"""
         self.width = width
         self.height = height
-        self.print_symbol = '#'
+        type(self).number_of_instances += 1
+
+    def __del__(self):
+        type(self).number_of_instances -= 1
+        print("Bye rectangle...")
 
     @property
     def width(self):
@@ -58,7 +64,10 @@ class Rectangle:
 
     def __str__(self):
         """Prints visual rectangle"""
-        symbol = str(self.print_symbol)
+        if type(self.print_symbol) is str:
+            symbol = self.print_symbol
+        else:
+            symbol = repr(self.print_symbol)
         width = self.width
         area = self.area()
 
@@ -67,7 +76,7 @@ class Rectangle:
             string = string + symbol
             if (i + 1) % width == 0 and (i + 1) / area != 1:
                 string = string + '\n'
-        return(str(string))
+        return string
 
     def __repr__(self):
         """Return string representation of a rectangle"""
