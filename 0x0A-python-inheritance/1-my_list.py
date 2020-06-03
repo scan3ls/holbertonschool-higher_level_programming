@@ -5,7 +5,7 @@
 class MyList(list):
     """Something
     """
-    
+
     def __init__(self):
         pass
 
