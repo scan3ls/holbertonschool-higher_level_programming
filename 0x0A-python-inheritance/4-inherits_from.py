@@ -2,8 +2,8 @@
 """Doc"""
 
 
-def is_kind_of_class(obj, a_class):
-		"""Check inherit"""
+def inderits_from(obj, a_class):
+	"""Check inherit"""
 	
 	if issubclass(type(obj), a_class):
 		return True

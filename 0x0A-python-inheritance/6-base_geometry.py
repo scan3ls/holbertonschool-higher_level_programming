@@ -3,9 +3,9 @@
 
 
 class BaseGeometry:
-	"""Empty"""
-	def __init__(self):
-		pass
+    """Empty"""
+    def __init__(self):
+        pass
 
-	def area(self):
-		raise Exception("area() is not implemented")
+    def area(self):
+        raise Exception("area() is not implemented")
