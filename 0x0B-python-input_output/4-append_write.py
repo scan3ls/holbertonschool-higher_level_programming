@@ -4,8 +4,8 @@
 
 def append_write(filename="", text=""):
     """Append test to a file
-    
-    Attributes:
+
+   Attributes:
         filename: name of file
         text: text to append to filename
 
