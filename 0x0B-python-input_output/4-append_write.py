@@ -2,7 +2,7 @@
 """Write a file"""
 
 
-def write_file(filename="", text=""):
+def append_write(filename="", text=""):
     """Append test to a file
     
     Attributes:
