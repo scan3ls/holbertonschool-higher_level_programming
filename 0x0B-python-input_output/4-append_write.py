@@ -3,7 +3,7 @@
 
 
 def write_file(filename="", text=""):
-    """Writes text to a file"""
+    """Writes text to a file2"""
 
     with open(filename, 'a') as f:
         count = f.write(text)

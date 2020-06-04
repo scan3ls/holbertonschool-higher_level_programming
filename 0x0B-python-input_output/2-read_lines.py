@@ -19,4 +19,4 @@ def read_lines(filename="", nb_lines=0):
             output += line
             line_counter += 1
 
-        print(output)
+        print(output, end="")
