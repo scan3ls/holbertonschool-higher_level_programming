@@ -3,7 +3,15 @@
 
 
 def write_file(filename="", text=""):
-    """Writes text to a file2"""
+    """Append test to a file
+    
+    Attributes:
+        filename: name of file
+        text: text to append to filename
+
+    Return:
+        count of characters wrote
+    """
 
     with open(filename, 'a') as f:
         count = f.write(text)
