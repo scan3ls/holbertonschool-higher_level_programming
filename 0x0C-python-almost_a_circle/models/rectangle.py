@@ -9,19 +9,21 @@ class Rectangle(Base):
 
     def __init__(self, width, height, x=0, y=0, id=None):
         """Constructor"""
+        is_Pos = True
+        is_Not_Pos = False
 
         self.id = Base(id).id
 
-        self.int_validator(width, "width", False)
+        self.int_validator(width, "width", is_Not_Pos)
         self.__width = width
 
-        self.int_validator(height, "height", False)
+        self.int_validator(height, "height", is_Not_Pos)
         self.__height = height
 
-        self.int_validator(x, "x", True)
+        self.int_validator(x, "x", is_Pos)
         self.__x = x
 
-        self.int_validator(y, "y", True)
+        self.int_validator(y, "y", is_Pos)
         self.__y = y
 
     @property
