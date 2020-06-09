@@ -54,7 +54,7 @@ class Base:
             return "[]"
         l = []
         for d in list_dictionaries:
-            l.append(d.to_dictionary())
+            l.append(d)
         string = json.dumps(l)
         return string
 
