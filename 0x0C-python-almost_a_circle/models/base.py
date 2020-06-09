@@ -81,13 +81,12 @@ class Base:
     @classmethod
     def load_from_file(cls):
         """make object/s from json file"""
-        name = cls.__name__
-        filename = name + ".json"
+        filename = cls.__name__ + ".json"
 
         with open(filename, 'r') as f:
             jsting = f.read()
 
-        list_of_dicts = json.loads(jsting)
+        list_of_dicts = Base.from_json_string(jsting)
         list_objects = []
         for dictionary in list_of_dicts:
             list_objects.append(Base.create(**dictionary))
