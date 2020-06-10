@@ -1,41 +1,38 @@
 #!/usr/bin/python3
-""" 18-main """
+""" Check """
 from models.rectangle import Rectangle
-from models.square import Square
+from models.base import Base
+import json
+import random
 
-if __name__ == "__main__":
+list_dictionaries = []
+map_dictionaries = {}
+for i in range(0, 5):
+    r = Rectangle(random.randrange(1, 100, 2), random.randrange(1, 100, 2), random.randrange(1, 100, 2), random.randrange(1, 100, 2))
+    rd = r.to_dictionary()
+    list_dictionaries.append(rd)
+    map_dictionaries[r.id] = rd
 
-    r1 = Rectangle(10, 7, 2, 8)
-    r2 = Rectangle(2, 4)
-    list_rectangles_input = [r1, r2]
+rjson = Base.to_json_string(list_dictionaries)
 
-    Rectangle.save_to_file(list_rectangles_input)
+if rjson is None:
+    print("to_json_string is not returning a string")
+    exit(1)
 
-    list_rectangles_output = Rectangle.load_from_file()
+output_list = json.loads(rjson)
+for output in output_list:
+    id_output = output.get('id')
+    if id_output is None:
+        break
+    dict_output = map_dictionaries.get(id_output)
+    if dict_output is None:
+        break
+    if dict_output != output:
+        break
+    del map_dictionaries[id_output]
 
-    for rect in list_rectangles_input:
-        print("[{}] {}".format(id(rect), rect))
+if len(map_dictionaries) != 0:
+    print("to_json_string doesn't correctly serialize {}: {}".format(list_dictionaries, rjson))
+    exit(1)
 
-    print("---")
-
-    for rect in list_rectangles_output:
-        print("[{}] {}".format(id(rect), rect))
-
-    print("---")
-    print("---")
-
-    s1 = Square(5)
-    s2 = Square(7, 9, 1)
-    list_squares_input = [s1, s2]
-
-    Square.save_to_file(list_squares_input)
-
-    list_squares_output = Square.load_from_file()
-
-    for square in list_squares_input:
-        print("[{}] {}".format(id(square), square))
-
-    print("---")
-
-    for square in list_squares_output:
-        print("[{}] {}".format(id(square), square))
+print("OK", end="")
