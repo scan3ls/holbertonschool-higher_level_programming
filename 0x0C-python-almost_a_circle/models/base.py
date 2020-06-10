@@ -59,11 +59,19 @@ class Base:
     @classmethod
     def save_to_file(cls, list_objs):
         """save object to json file"""
-        save = cls.to_json_string(list_objs)
-        if save == "[]":
-            name = "Rectangle"
-        else:
-            name = type(list_objs[0]).__name__
+
+        from models.rectangle import Rectangle
+        from models.square import Square
+
+        list_dicts = []
+
+        for item in list_objs:
+            if type(item) is Rectangle\
+                    or type(item) is Square:
+                list_dicts.append(item.to_dictionary())
+        save = cls.to_json_string(list_dicts)
+
+        name = cls.__name__
         with open("{}.json".format(name), 'w') as f:
             f.write(save)
 
