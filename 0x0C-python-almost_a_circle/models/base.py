@@ -64,12 +64,14 @@ class Base:
         from models.square import Square
 
         list_dicts = []
+        if list_objs is None:
 
-        for item in list_objs:
-            if type(item) is Rectangle\
-                    or type(item) is Square:
-                list_dicts.append(item.to_dictionary())
-        save = cls.to_json_string(list_dicts)
+        else:
+            for item in list_objs:
+                if type(item) is Rectangle\
+                        or type(item) is Square:
+                    list_dicts.append(item.to_dictionary())
+            save = cls.to_json_string(list_dicts)
 
         name = cls.__name__
         with open("{}.json".format(name), 'w') as f:
