@@ -65,7 +65,7 @@ class Base:
 
         list_dicts = []
         if list_objs is None:
-
+            save = "[]"
         else:
             for item in list_objs:
                 if type(item) is Rectangle\
@@ -85,7 +85,7 @@ class Base:
             with open(filename, 'r') as f:
                 jsting = f.read()
         except FileNotFoundError:
-            return []=
+            return []
 
         list_of_dicts = Base.from_json_string(jsting)
         list_objects = []
