@@ -1,38 +1,22 @@
 #!/usr/bin/python3
 """ Check """
 from models.rectangle import Rectangle
-from models.base import Base
+import os
 import json
-import random
 
-list_dictionaries = []
-map_dictionaries = {}
-for i in range(0, 5):
-    r = Rectangle(random.randrange(1, 100, 2), random.randrange(1, 100, 2), random.randrange(1, 100, 2), random.randrange(1, 100, 2))
-    rd = r.to_dictionary()
-    list_dictionaries.append(rd)
-    map_dictionaries[r.id] = rd
 
-rjson = Base.to_json_string(list_dictionaries)
+file_path = "Rectangle.json"
+if os.path.exists(file_path):
+    os.remove(file_path)
 
-if rjson is None:
-    print("to_json_string is not returning a string")
+res = Rectangle.load_from_file()
+
+if res is None:
+    print("load_from_file doesn't return an empty list when the file doesn't exist")
     exit(1)
 
-output_list = json.loads(rjson)
-for output in output_list:
-    id_output = output.get('id')
-    if id_output is None:
-        break
-    dict_output = map_dictionaries.get(id_output)
-    if dict_output is None:
-        break
-    if dict_output != output:
-        break
-    del map_dictionaries[id_output]
-
-if len(map_dictionaries) != 0:
-    print("to_json_string doesn't correctly serialize {}: {}".format(list_dictionaries, rjson))
+if len(res) != 0:
+    print("load_from_file doesn't return an empty list when the file doesn't exist")
     exit(1)
 
 print("OK", end="")

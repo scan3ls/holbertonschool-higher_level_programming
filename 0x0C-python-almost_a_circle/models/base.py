@@ -20,23 +20,11 @@ class Base:
         from models.square import Square
 
         if "size" in dictionary:
-            cls = Square(1, 0, 0, 0)
-            cls.update(
-                dictionary['id'],
-                dictionary['size'],
-                dictionary['x'],
-                dictionary['y']
-            )
+            cls = Square(1, 0, 0)
         else:
-            cls = Rectangle(1, 1, 0, 0, 0)
-            cls.update(
-                dictionary['id'],
-                dictionary['width'],
-                dictionary['height'],
-                dictionary['x'],
-                dictionary['y']
-            )
+            cls = Rectangle(1, 1, 0, 0)
 
+        cls.update(**dictionary)
         return cls
 
     def __init__(self, id=None):
@@ -83,9 +71,11 @@ class Base:
     def load_from_file(cls):
         """make object/s from json file"""
         filename = cls.__name__ + ".json"
-
-        with open(filename, 'r') as f:
-            jsting = f.read()
+        try:
+            with open(filename, 'r') as f:
+                jsting = f.read()
+        except FileNotFoundError:
+            return []            
 
         list_of_dicts = Base.from_json_string(jsting)
         list_objects = []
