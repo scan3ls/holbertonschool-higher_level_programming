@@ -83,7 +83,7 @@ class Base:
             with open(filename, 'r') as f:
                 jsting = f.read()
         except FileNotFoundError:
-            return []            
+            return []=
 
         list_of_dicts = Base.from_json_string(jsting)
         list_objects = []
