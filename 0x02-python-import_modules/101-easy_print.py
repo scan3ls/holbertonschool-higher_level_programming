@@ -1,5 +1,5 @@
 #!/usr/bin/python3
 
-from sys import stdout as pr
+import os
 
-pr.write("#pythoniscool\n")
+os.write(1, bytes("#pythoniscool\n", 'UTF-8'))
