@@ -14,11 +14,11 @@ This is a repository containing assignments for Holberton School.
 |7-cities.sql|  Write a script that creates the database ```hbtn_0d_usa``` and the table ```cities``` (in the database ```hbtn_0d_usa```) on your MySQL server.|
 |8-cities_of_california_subquery.sql|  Write a script that lists all the cities of California that can be found in the database ```hbtn_0d_usa```.|
 |9-cities_by_state_join.sql|  Write a script that lists all cities contained in the database ```hbtn_0d_usa```.|
-|10-genre_id_by_show.sql|  Import the database dump from ```hbtn_0d_tvshows``` to your MySQL server: <a href="https://s3.amazonaws.com/intranet-projects-files/holbertonschool-higher-level_programming+/274/hbtn_0d_tvshows.sql" title="download" target="_blank">download</a>|
-|11-genre_id_all_shows.sql|  Import the database dump of ```hbtn_0d_tvshows``` to your MySQL server: <a href="https://s3.amazonaws.com/intranet-projects-files/holbertonschool-higher-level_programming+/274/hbtn_0d_tvshows.sql" title="download" target="_blank">download</a> (same as ```10-genre_id_by_show.sql```)|
-|12-no_genre.sql|  Import the database dump from ```hbtn_0d_tvshows``` to your MySQL server: <a href="https://s3.amazonaws.com/intranet-projects-files/holbertonschool-higher-level_programming+/274/hbtn_0d_tvshows.sql" title="download" target="_blank">download</a> (same as ```11-genre_id_all_shows.sql```)|
-|13-count_shows_by_genre.sql|  Import the database dump from ```hbtn_0d_tvshows``` to your MySQL server: <a href="https://s3.amazonaws.com/intranet-projects-files/holbertonschool-higher-level_programming+/274/hbtn_0d_tvshows.sql" title="download" target="_blank">download</a> (same as ```12-no_genre.sql```)|
-|14-my_genres.sql|  Import the database dump from ```hbtn_0d_tvshows``` to your MySQL server: <a href="https://s3.amazonaws.com/intranet-projects-files/holbertonschool-higher-level_programming+/274/hbtn_0d_tvshows.sql" title="download" target="_blank">download</a> (same as ```13-count_shows_by_genre.sql```)|
-|15-comedy_only.sql|  Import the database dump from ```hbtn_0d_tvshows``` to your MySQL server: <a href="https://s3.amazonaws.com/intranet-projects-files/holbertonschool-higher-level_programming+/274/hbtn_0d_tvshows.sql" title="download" target="_blank">download</a> (same as ```14-my_genres.sql```)|
-|16-shows_by_genre.sql|  Import the database dump from ```hbtn_0d_tvshows``` to your MySQL server: <a href="https://s3.amazonaws.com/intranet-projects-files/holbertonschool-higher-level_programming+/274/hbtn_0d_tvshows.sql" title="download" target="_blank">download</a> (same as ```15-comedy_only.sql```)|
+|10-genre_id_by_show.sql| Write a script that lists all shows contained in hbtn_0d_tvshows that have at least one genre linked|
+|11-genre_id_all_shows.sql| Write a script that lists all shows contained in the database hbtn_0d_tvshows|
+|12-no_genre.sql| Write a script that lists all shows contained in hbtn_0d_tvshows without a genre linked|
+|13-count_shows_by_genre.sql| Write a script that lists all genres from hbtn_0d_tvshows and displays the number of shows linked to each|
+|14-my_genres.sql|  Write a script that uses the hbtn_0d_tvshows database to lists all genres of the show Dexter|
+|15-comedy_only.sql|  Write a script that lists all Comedy shows in the database hbtn_0d_tvshows|
+|16-shows_by_genre.sql|  Write a script that lists all shows, and all genres linked to that show, from the database hbtn_0d_tvshows|
 
