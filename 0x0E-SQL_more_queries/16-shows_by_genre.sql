@@ -1,0 +1,2 @@
+-- lists all shows and all genres lined to the show-- lists all shows w/ at least one genre linked
+-- comment 2
