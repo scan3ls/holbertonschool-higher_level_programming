@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """ execute mysql task with given user info on given database """
 
-if __name__ = "__main__":
+if __name__ == "__main__":
 
     import MySQLdb
     from sys import argv
@@ -26,6 +26,7 @@ if __name__ = "__main__":
     cursor.execute(
         """
         SELECT * FROM states
+			ORDER BY states.id
         """
     )
 
