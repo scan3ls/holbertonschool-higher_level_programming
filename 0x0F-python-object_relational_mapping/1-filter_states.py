@@ -26,9 +26,9 @@ if __name__ == "__main__":
     cursor.execute(
         """
         SELECT *
-			FROM states
-			WHERE INSTR(LEFT(states.name, 1), 'N') > 0
-			ORDER BY states.id
+            FROM states
+            WHERE INSTR(LEFT(states.name, 1), 'N') > 0
+            ORDER BY states.id
         """
     )
 

@@ -26,7 +26,7 @@ if __name__ == "__main__":
     cursor.execute(
         """
         SELECT * FROM states
-			ORDER BY states.id
+            ORDER BY states.id
         """
     )
 
