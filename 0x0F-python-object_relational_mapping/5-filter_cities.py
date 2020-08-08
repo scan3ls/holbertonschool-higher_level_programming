@@ -48,7 +48,7 @@ if __name__ == "__main__":
     for item in results:
         cities.append(item[1])
     print(*cities, sep=", ")
-    
+
     # close cursor
     cursor.close()
 
