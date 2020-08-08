@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """ module """
 
-if __name__ = "__main__":
+if __name__ == "__main__":
 
     # imports
     from sqlalchemy import create_engine
