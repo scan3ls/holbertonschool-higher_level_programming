@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """ Peak finder """
 
+
 def find_peak(list_of_integers):
     """ finder """
 
