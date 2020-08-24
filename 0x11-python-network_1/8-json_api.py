@@ -13,7 +13,7 @@ if __name__ == "__main__":
     else:
         q = argv[1]
 
-    r = requests.post(url, data = {'q': q})
+    r = requests.post(url, data={'q': q})
     dictionary = r.json()
     if dictionary == {}:
         print("No result")
@@ -21,4 +21,4 @@ if __name__ == "__main__":
 
     id = dictionary['id']
     name = dictionary['name']
-    print("[{}] {}".format(id, name)
+    print("[{}] {}".format(id, name))
