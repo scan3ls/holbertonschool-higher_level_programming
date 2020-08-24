@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+""" module """
 
 if __name__ == "__main__":
     import urllib.request
