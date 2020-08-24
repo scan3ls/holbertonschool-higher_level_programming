@@ -15,6 +15,7 @@ def print_status(url=None):
     var_type = type(html)
     content = html
     utf8_cont = html.decode('UTF-8')
+    print("Body response:")
     print('\t- type:', var_type)
     print('\t- content:', content)
     print('\t- utf8 content:', utf8_cont)
