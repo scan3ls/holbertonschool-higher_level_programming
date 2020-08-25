@@ -14,7 +14,7 @@ if __name__ == "__main__":
         q = argv[1]
 
     r = requests.post(url, data={'q': q})
-    
+
     try:
         dictionary = r.json()
     except:
