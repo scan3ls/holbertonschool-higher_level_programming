@@ -12,7 +12,6 @@ if __name__ == "__main__":
 
     path = "{}/users/{}".format(api, username)
     thing = requests.get(path)
-    print(thing)
     d = thing.json()
     id = d['id']
     print(id)
