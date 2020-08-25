@@ -14,7 +14,13 @@ if __name__ == "__main__":
         q = argv[1]
 
     r = requests.post(url, data={'q': q})
-    dictionary = r.json()
+    
+    try:
+        dictionary = r.json()
+    except:
+        print("Not a valid JSON")
+        exit()
+
     if dictionary == {}:
         print("No result")
         exit()
