@@ -22,7 +22,7 @@ def post_request():
     with req.urlopen(request) as response:
         page = response.read()
     page = page.decode('UTF-8')
-
+    print(page)
 
 if __name__ == "__main__":
     post_request()
