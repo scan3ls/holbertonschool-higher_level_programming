@@ -8,5 +8,5 @@ const num1 = parseInt(arg1);
 if (isNaN(num1)) {
   console.log('Not a number');
 } else {
-  console.log('My number: ', num1);
+  console.log('My number:', num1);
 }
