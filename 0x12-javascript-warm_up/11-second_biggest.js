@@ -16,8 +16,8 @@ for (i = 0; i < numbers.length; i++) {
   }
 }
 
-if (second === -Infinity){
+if (second === -Infinity) {
   second = 0;
 }
 
-console.log(second)
+console.log(second);
