@@ -6,7 +6,7 @@ const request = require('request');
 
 request(url, function (error, response, body) {
   if (error) return console.error(error);
-  if (response.statusCode != 200) return;
+  if (response.statusCode !== 200) return;
   const obj = JSON.parse(body);
   const counter = {
     1: 0,
@@ -20,6 +20,13 @@ request(url, function (error, response, body) {
     9: 0,
     10: 0
   };
+
+  if (obj.length === undefined) {
+    if (obj.completed) counter[obj.userId]++;
+    console.log(counter);
+    return;
+  }
+
   for (let i = 0; i < obj.length; i++) {
     const current = obj[i];
     const userId = current.userId;
