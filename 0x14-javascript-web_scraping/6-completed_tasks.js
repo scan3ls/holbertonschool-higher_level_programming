@@ -1,12 +1,12 @@
 #!/usr/bin/node
 
-const args = process.argv;
-const url = args.slice(2)[0];
+const url = process.argv[2];
 
 const request = require('request');
 
 request(url, function (error, response, body) {
   if (error) return console.error(error);
+  if (response.statusCode != 200) return;
   const obj = JSON.parse(body);
   const counter = {
     1: 0,
