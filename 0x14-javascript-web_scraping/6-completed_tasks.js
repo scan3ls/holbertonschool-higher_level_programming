@@ -8,21 +8,13 @@ request(url, function (error, response, body) {
   if (error) return console.error(error);
   if (response.statusCode !== 200) return;
   const obj = JSON.parse(body);
-  const counter = {
-    1: 0,
-    2: 0,
-    3: 0,
-    4: 0,
-    5: 0,
-    6: 0,
-    7: 0,
-    8: 0,
-    9: 0,
-    10: 0
-  };
+  const counter = {};
 
   if (obj.length === undefined) {
-    if (obj.completed) counter[obj.userId]++;
+    if (obj.completed) {
+      if (counter[obj.userId] === undefined) counter[obj.userId] = 1;
+      else counter[obj.userId]++;
+    }
     console.log(counter);
     return;
   }
@@ -32,7 +24,8 @@ request(url, function (error, response, body) {
     const userId = current.userId;
     const completed = current.completed;
     if (completed) {
-      counter[userId.toString()]++;
+      if (counter[userId] === undefined) counter[userId] = 1;
+      else counter[userId]++;
     }
   }
   console.log(counter);
