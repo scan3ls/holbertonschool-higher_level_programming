@@ -5,7 +5,7 @@ const url = 'https://swapi-api.hbtn.io/api/films/';
 const request = require('request');
 
 request(url, function (error, response, body) {
-  if (error) console.error(error);
+  if (error) return console.error(error);
   const data = JSON.parse(body);
   const results = data.results;
   let counter = 0;
