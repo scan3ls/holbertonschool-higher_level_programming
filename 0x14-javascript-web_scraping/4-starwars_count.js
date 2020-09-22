@@ -6,6 +6,7 @@ const request = require('request');
 
 request(url, function (error, response, body) {
   if (error) return console.error(error);
+  if (response.statusCode !== 200) return;
   const data = JSON.parse(body);
   const results = data.results;
   let counter = 0;
