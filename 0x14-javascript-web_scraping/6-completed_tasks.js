@@ -6,7 +6,7 @@ const url = args.slice(2)[0];
 const request = require('request');
 
 request(url, function (error, response, body) {
-  if (error) console.error(error);
+  if (error) return console.error(error);
   const obj = JSON.parse(body);
   const counter = {
     1: 0,
