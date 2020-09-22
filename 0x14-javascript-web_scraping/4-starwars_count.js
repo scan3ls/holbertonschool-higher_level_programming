@@ -11,7 +11,7 @@ request(url, function (error, response, body) {
   const results = data.results;
   let counter = 0;
   const charId = 'https://swapi-api.hbtn.io/api/people/18/';
-  for (let i = 0; i < results.length; i++) {
+  for (let i in results) {
     const people = results[i].characters;
     if (people.includes(charId)) counter++;
   }
