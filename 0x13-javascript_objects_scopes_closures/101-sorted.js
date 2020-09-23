@@ -11,7 +11,6 @@ for (const key in dict) {
 
 for (const key in dict) {
   const newKey = dict[key];
-  //console.log(newDict[newKey])
   newDict[newKey].push(key);
 }
 
