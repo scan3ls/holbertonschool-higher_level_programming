@@ -10,7 +10,7 @@ for (const key in dict) {
 }
 
 for (const key in dict) {
-  var newKey = dict[key];
+  const newKey = dict[key];
   newDict[newKey].push(key);
 }
 
