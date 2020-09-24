@@ -13,6 +13,6 @@ $(function () {
   });
 });
 
-$('header').click(function () {
+$('HEADER').click(function () {
   $('DIV#character').text(name);
 });

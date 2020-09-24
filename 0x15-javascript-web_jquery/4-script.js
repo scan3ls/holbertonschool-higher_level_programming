@@ -1,4 +1,4 @@
-$('#toggle_header').click(function () {
-  $('header').toggleClass('green');
-  $('header').toggleClass('red');
+$('DIV#toggle_header').click(function () {
+  $('HEADER').toggleClass('green');
+  $('HEADER').toggleClass('red');
 });
